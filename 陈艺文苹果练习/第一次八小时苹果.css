@@ -1,0 +1,608 @@
+/* 页面边框删除 */
+body {
+    margin: 0;
+    font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+
+
+/* svg设置 */
+.icon {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+/* 背景 */
+.shang {
+    background: url(./img/背景1.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 100%;
+    height: 576px;
+}
+
+/* 导航栏 */
+.head {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* 导航栏里面的内容 */
+.lei {
+    width: 980px;
+    height: 44px;
+    padding: 0 22px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* 导航栏的响应 */
+@media screen and (max-width: 1040px){
+    .lei{ 
+        width: calc(100% - 44px);
+    }
+}
+
+/* 导航栏 */
+.head >* {
+    opacity: 0.8;
+    padding: 0 10px;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.li {
+    width: 980px;
+    height: 157px;
+    margin: 0 auto;
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 标题 */
+.li h1 {
+    height: 45;
+    font-size: 47px;
+    line-height: 45px;
+    margin: 32px 0 0 0;
+    visibility: visible;
+    font-weight: 500;
+}
+
+.zhong {
+    margin-top: 24px;
+    width: 654px;
+    height: 52px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+/* 搜索框 */
+.shou {
+    width: 50px;
+    height: 52px;
+    border: 1px solid #dedede;
+    background-color: white;
+    border-right: none;
+    outline: none;
+    border-radius: 3px 0 0 3px ;
+}
+
+.fu {
+    opacity: 0.4;
+}
+
+.shuRu {
+    font-size: 1.25rem;
+    font-weight: 300;
+    outline: none;
+    width: 602px;
+    height: 52px;
+    padding-right: 35px;
+    border: 1px solid #dedede;
+    background-color: white;
+    border-left: none;
+    border-radius: 0 3px 3px 0;
+}
+
+/* 应用 */
+.yingYong {
+    padding: 58px 0 48px 0;
+    width: 100%;
+    height: 157px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-bottom: 1px solid #dedede;
+}
+
+.yong {
+    width: 146px;
+    height: 109px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 48px;
+    padding: 0 12px 0 12px;
+    cursor: pointer;
+}
+
+/* 聚焦下划线 */
+.yong:hover span {
+    text-decoration: underline;
+}
+
+.yong img {
+    width: 68px;
+    height: 68px;
+    padding-bottom: 16px;
+}
+
+.yong span {
+    font-size: 17px;
+}
+
+/* 工具 */
+.gongJv {
+    padding: 48px 0 42px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid #dedede;
+    cursor: pointer;
+}
+
+.gong {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: 205px;
+    height: 100px;
+    padding: 0 60px;
+    font-size: 0.9375rem;
+}
+
+.gong img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 16px;
+}
+
+.gong span {
+    color: #0070c9;
+}
+/* 聚焦下划线 */
+.gong:hover .wen {
+    text-decoration: underline;
+}
+
+/* 音响 */
+.yingXiang {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid #dedede;
+}
+
+.xiang {
+    width: 448px;
+    height: 294px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.xiang img {
+    width: 240px;
+    height: 140px;
+    margin: 0 auto 17px auto;
+}
+
+.xiang h3 {
+    font-size: 32px;
+    margin: 8px 0;
+    font-weight: 500;
+}
+
+.xiang span {
+    font-size: 17px;
+    margin-top: 12px;
+}
+
+.xiang div {
+    width: 100%;
+    color: #0070c9;
+    margin-top: 12px;
+    cursor: pointer;
+}
+
+.xiang div:hover .wen {
+    text-decoration: underline;
+}
+
+/* 设备 */
+.sheBei {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 48px 0;
+}
+
+.sheBei img {
+    width: 400px;
+    height: 209px;
+}
+
+.she {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 408px;
+    height: 210px;
+}
+
+.she h3 {
+    font-size: 40px;
+    margin: 0;
+    margin-bottom: 11.2px;
+    font-weight: 500;
+}
+
+.she p {
+    font-size: 22px;
+    margin: 16px 0 5px 0;
+}
+
+.she div {
+    width: 133px;
+    cursor: pointer;
+    margin-top: 24px;
+    color: #0070c9;
+}
+
+.she div:hover .wen {
+    text-decoration: underline;
+}
+
+/* 电脑 */
+.computer {
+    width: 100%;
+    height: 430px;
+    background: url(./img/背景2.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.nao {
+    width: 980px;
+    margin: 0 auto;
+}
+
+.nao h3 {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.nao span {
+    width: 400px;
+    font-size: 17px;
+    line-height: 1.5294717647;
+}
+
+.nao div {
+    width: 88px;
+    margin-top: 16px;
+    color: #6BF;
+    cursor: pointer;
+}
+
+.nao div:hover .wen {
+    text-decoration: underline;
+}
+
+/* 苹果 */
+.pinGuo {
+    width: 100%;
+    height: 225px;
+    margin: 42px auto 0 auto ;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 48px;
+    border-bottom: 1px solid #dedede;
+}
+
+.pinGuo img {
+    width: 400px;
+    height: 200px;
+}
+
+.guo {
+    width: 400px;
+}
+
+.guo h3 {
+    font-size: 32px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.guo p {
+    font-size: 17px;
+    margin: 12px 0 0 0;
+    line-height: 1.5294717647;
+}
+
+.guo div {
+    margin-top: 12px;
+    height: 26px;
+    line-height: 26px;
+    color: #0070c9;
+}
+
+.guo div:hover .wen {
+    text-decoration: underline;
+}
+
+/* 一段话 */
+.hua {
+    margin-top: 32px;
+    padding-bottom: 48px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #dedede;
+}
+
+.hua h3 {
+    margin: 0;
+    width: 817px;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.hua p {
+    margin: 12px  0 0 0 ;
+    text-align: center;
+    width: 817px;
+    font-size: 17px;
+    line-height: 1.5294717647;
+    font-weight: 400;
+}
+
+.hua span {
+    color: #0070c9;
+    cursor: pointer;
+}
+
+.hua span:hover {
+    text-decoration: underline;
+}
+
+/* 小心诈骗 */
+.zhaPian {
+    padding: 48px 0;
+    height: 157px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-bottom: 1px solid #dedede;
+}
+
+.zhaPian img {
+    width: 240px;
+    height: 140px;
+}
+
+.pian {
+    width: 523px;
+    padding-left: 50px;
+}
+
+.pian h3 {
+    font-size: 32px;
+    line-height: 1.09375;
+    font-weight: 500;
+    margin: 8px 0;
+}
+
+.pian div {
+    margin-top: 12px;
+    color: #0070c9;
+    cursor: pointer;
+}
+
+.pian div:hover .wen {
+    text-decoration: underline;
+}
+
+/* 苹果服务 */
+.fuWu {
+    width: 817px;
+    margin: 0 auto;
+    padding: 48px 0;
+}
+
+.fuWu h3 {
+    font-size: 24px;
+    line-height: 1.2084933333;
+    font-weight: 500;
+    margin: 0;
+    padding-bottom: 1px;
+}
+
+.fuWu p {
+    color: #0070c9;
+    font-size: 17px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.fuWu p:hover {
+    text-decoration: underline;
+}
+
+.fuWu div {
+    color: #0070c9;
+
+}
+
+.fuWu div:hover .wen {
+    text-decoration: underline;
+}
+
+/* 底栏 */
+.diLan {
+    height: 435px;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shiPing {
+    width: 980px;
+    height: 125px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #dedede;
+}
+
+.shiPing p {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: -0.021;
+}
+
+.tu {
+    height: 32px;
+    padding-top: 15px;
+    width: 100%; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.tu img {
+    width: 32px;
+    height: 32px;
+
+}
+
+.bangZhu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.biao svg {
+    margin-right: 11px;
+} 
+
+.biao {
+    padding: 17px 0;
+    height: 24px;
+    width: 980px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.xuanZhe {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 25px;
+} 
+
+.xuan{
+    width: 245px;
+}
+
+.zheTou {
+    margin-bottom: 6px;
+    font-size: 12px;
+    line-height: 1.27273;
+    font-weight: 600;
+}
+
+.zhe {
+    font-size: 12px;
+    font-weight: 400;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.zhe div {
+    display: inline-block;
+    height: 21px;
+    line-height: 21px;
+    color: #555;
+}
+
+.zhe div:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.shangBiao {
+    height: 20px;
+    width: 980px;
+    padding-top: 6px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12.8px;
+    border-top: 1px solid #dedede;
+}
+
+.qian {
+    display: flex;
+    flex-direction: row;
+}
+
+.qian div:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.B {
+    color: #888;
+    margin-right: 26px; 
+}
+
+.w {
+    color: #555; 
+    padding-right: 12px;
+    margin-right: 10px;
+    border-right: 1px solid #dedede;
+}
+
+.hou:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}

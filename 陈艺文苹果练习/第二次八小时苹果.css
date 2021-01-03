@@ -1,0 +1,673 @@
+body {
+    margin: 0;
+    letter-spacing: .011em;
+    font-size: 17px;
+    line-height: 1.5294717647;
+    font-weight: 400;
+    font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+
+.xian {
+    width: 100%;
+    border-bottom: 1px solid #dedede;
+}
+
+.shang {
+    background: url(./img/背景1.jpg);
+    height: 575px;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.head {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: saturate(180%) blur(20px);
+}
+
+.lei {
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lei >* {
+    height: 44px;
+    padding: 0 10px;
+    color: #f5f5f7;
+    font-size: 14px;
+    line-height: 44px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.5s;
+}
+
+.lei span:hover {
+    opacity: 1;
+    
+}
+
+.lei svg:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.xiaoLei {
+    height: 48px;
+    display: none;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.xiaoLei >* {
+    padding: 0 16px;
+    cursor: pointer;
+    transition: opacity 0.5s;
+}
+
+.xiaoLei svg {
+    opacity: 0.8;
+}
+
+.xiaoLei svg:hover {
+    opacity: 1;
+}
+
+@media only screen and (max-width: 758px){
+    .lei { 
+        display: none;
+    }
+    .xiaoLei {
+        display: flex;
+    }
+}
+
+.B {
+    width: 17px;
+    height: 30px;
+    position: relative;
+}
+
+.bar {
+    width: 17px;
+    border-bottom: 1.5px solid grey;
+    transform-origin: 78%;
+    transition: transform 0.5s;
+}
+
+.S{
+    position: absolute;
+    top: 11px;
+}
+
+.X{
+    position: absolute;
+    bottom: 10.65px;
+    border-bottom: 1.5px solid rgb(194, 192, 192);
+}
+
+.active .S{
+    transform: rotate(-45deg);
+}
+
+.active .X{
+    transform: rotate(45deg);
+}
+
+.option {
+    position: absolute;
+    top: 39px;
+    left: -17px;
+    width: 100vw;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s;
+    background: black;
+    z-index: 5;
+}
+
+.active .option {
+    height: 100vh;
+}
+
+
+.active ul {
+    width: calc(100% - 80px);
+    color: white;
+    list-style-type:none;
+    padding: 0 40px;
+    margin-top: 50px;
+}
+
+.active li {
+    font-size: 16px;
+    padding: 0;
+    height: 44px;
+    line-height: 44px;
+    border-bottom: 2px solid #424245;
+    opacity: 0.8;
+}
+
+
+
+
+.active .head {
+    background: black;
+    backdrop-filter: saturate(0%) blur(0px);
+    transition: background 0.5s;
+}
+
+.active .head .xiaoLei .icon:nth-child(3) {
+    transition: opacity 0.5s;
+    opacity: 0;
+}
+
+
+/* 搜索 */
+.li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 34px;
+}
+
+.li h1 {
+    font-size: 48px;
+    font-weight: 500;
+    margin: 32px 0 0 0 ;
+}
+
+.zhong {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    margin-top: 24px;
+    position: relative;
+}
+
+.shou {
+    width: 50px;
+    height: 47px;
+    padding: 0;
+    border: white;
+    background-color: white;
+    outline: none;
+    position: absolute;
+    left: 1px;
+}
+
+.shou svg {
+    opacity: 0.4;
+}
+
+.shuRu {
+    padding-left: 50px;
+    height: 51px;
+    width: 604px;
+    border: white;
+    outline: none;
+    border-radius: 3px;
+    font-size: 1.375rem;
+    font-weight: 300;
+    border: 1px solid rgb(218, 218, 218);
+}
+
+.shuRu:focus {
+    border: 1px solid #bbb;
+}
+
+
+.xiangGuan {
+    background-color: white;
+    width: 100%;
+    height: 100px;
+}
+
+
+
+.active .zhong {
+    position: absolute;
+    top: 40px;
+    width: calc(100% - 20px);
+    margin: 0 10px;
+}
+
+.active .zhong .shou {
+    background-color: #323233;
+    height: 34px;
+    width: 38px;
+} 
+
+.active .zhong .shuRu {
+    background-color: #323233;
+    border:#323233;
+    color: white;
+    height: 36px;
+}
+
+
+
+/* 图标 */
+.yingYong {
+    padding-top: 58px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1020px;
+    flex-wrap: wrap;
+    padding-bottom: 48px;
+}
+
+.yong {
+    width: 16.666666666%;
+    height: 110px;
+    margin-bottom: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.yong img {
+    width: 68px;
+    height: 68px;
+    padding-bottom: 16px;
+}
+
+.yong div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.yong div span {
+    font-size: 17px;
+    line-height: 1.5294717647;
+    font-weight: 400;
+}
+
+.yong div:hover {
+    text-decoration: underline;
+}
+
+/* 工具 */
+
+.gongJv {
+    width: 980px;
+    display: flex;
+    flex-direction: row;
+    margin: 48px auto;
+
+}
+
+.gong {
+    width: 205px;
+    height: 100px;
+    padding: 0 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.gong img {
+    width: 40px;
+    height: 40px;
+}
+
+.gong div {
+    margin-top: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+    font-size: .9375rem;
+    color: #0070c9;
+    text-align: center;
+}
+
+.gong:nth-child(1) div {
+    width: 140px;
+}
+
+.gong {
+    border-right: 1px solid #dedede;
+}
+
+.gong:nth-child(4) {
+    border: none;
+   
+}
+
+.gong:hover .wen {
+    text-decoration: underline;
+}
+
+/* 音响 */
+.yingXiang {
+    width: 980px;
+    display: flex;
+    flex-direction: row;
+    margin: 48px auto 48px auto;
+}
+
+.xiang {
+    width: 446px;
+    height: 294px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.xiang:nth-child(1) {
+    padding-right: 43px;
+}
+
+.xiang:nth-child(2) {
+    padding-left: 43px;
+}
+
+.xiang img {
+    margin: 0 auto;
+    width: 240px;
+    height: 140px;
+}
+
+.zi h3 {
+    width: 100%;
+    margin: .5rem 0 12px 0;
+    font-size: 32px;
+    line-height: 1.09375;
+    font-weight: 500;
+}
+
+.zi div {
+    width: 100%;
+    margin-top: 12px;
+    color: #0070c9;
+    cursor: pointer;
+}
+
+.zi div:hover .wen {
+    text-decoration: underline;
+}
+
+/* 设备 */
+.sheBei {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 48px 5%;
+}
+
+.sheBei img {
+    width: 400px;
+    height: 209px;
+}
+
+.she {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 408px;
+}
+
+.she h3 {
+    margin: 0;
+    font-size: 40px;
+    line-height: 1.05;
+    font-weight: 500;
+    letter-spacing: .008em;
+}
+
+.she p {
+    margin: 16px 0 0 0 ;
+    font-size: 20px;
+    line-height: 1.4545454545;
+    font-weight: 300;
+}
+
+.she div {
+    width: 133px;
+    cursor: pointer;
+    margin-top: 24px;
+    color: #0070c9;
+}
+
+.she div:hover .wen {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+/* 响应式 */
+@media only screen and (max-width: 1050px) {
+    /* 导航栏的响应 */
+    .shang {
+        height: 515px;
+    }
+
+    .li {
+        margin-top: 8px;
+    }
+
+    .li h1 {
+        font-size: 39px;
+        margin-top: 32px;
+    }
+
+    .zhong {
+        margin-top: 22px;
+    }
+
+    .shou {
+        left: 1px;
+        width: 40px;
+    }
+
+    .shuRu {
+        width: 535px;
+        padding-left: 40px;
+    }
+    /* 应用的响应 */
+    .Yong {
+        width: 33.3333333333%;
+    }
+    .yingYong {
+        width: 100%;
+    }
+
+    /* 工具的响应 */
+    .gongJv {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .gong {
+        height: 78px;
+        padding: 30px 30px 31px 30px;
+        width: 584px;
+        margin: 0 24px;
+    }
+
+    .gong:nth-child(1) div {
+        width: auto;
+    }
+    
+    .gong {
+        border: none;
+        border-bottom: 1px solid #dedede;
+    }
+
+    .gong:nth-child(4) {
+        border: none;
+    }
+
+    /* 音响的响应 */
+    .yingXiang {
+        flex-direction: column;
+        align-items: center;
+        width: 692px;
+    }
+
+    .xiang {
+        width: 692px;
+        height: 150px;
+    }
+    
+    .xiang:nth-child(1) {
+        padding-right: 0;
+        flex-direction: row;
+    }
+
+    .xiang:nth-child(2) {
+        padding-left: 0;
+        flex-direction: row;
+        margin-top: 32px;
+    }
+
+    .xiang img {
+        width: 228px;
+        height: 133px;
+    }
+
+    .zi {
+        padding-left: 24px;
+    }
+
+    /* 设备的响应 */
+    .sheBei {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .she {
+        width: 692px;
+        align-items: center;
+    }
+
+    .she h3 {
+        font-size: 32px;
+        margin-top: 30px;
+    }
+
+    .she p {
+        text-align: center;
+    }
+}
+
+
+@media only screen and (max-width: 735px){
+    /* 搜索和背景 */
+    .shang {
+        height: 278px;
+        margin-bottom: 132px;
+    }
+
+    .li {
+        height: 96px;
+        margin-top: 267px;
+    }
+
+    .li h1 {
+        margin: 0;
+        font-size: 31px;
+        text-align: center;
+    }
+
+    .zhong {
+        width: 88%;
+        margin: 18px 6% 0 6% ;
+    }
+
+    .shou {
+        height: 34px;
+        left: 1px;
+    }
+
+    .shou svg {
+        width: 19;
+    }
+
+    .shuRu {
+        width:calc(120% - 50px) ;
+        height: 38px;
+        font-size: 1.1875rem;
+    }
+
+    /* 应用 */
+    .yong {
+        width: 50%;
+    }
+
+    /* 工具 */
+    .gong {
+        width: 75%;
+    }
+
+    /* 音响 */
+    .yingXiang {
+        width:calc(100% - 66px); 
+        margin-left: 33px;
+        margin-right: 33px;
+    }
+
+    .xiang:nth-child(1) {
+        height: auto;
+        width: 100%;
+        padding-right: 0;
+        flex-direction: column;
+    }
+
+    .xiang:nth-child(2) {
+        height: auto;
+        width: 100%;
+        padding-left: 0;
+        flex-direction: column;
+        margin-top: 32px;
+    }
+
+    .xiang img {
+        width: 240px;
+        height: 140px;
+        margin-bottom: 17px;
+    }
+
+    /* 设备 */  
+
+    .she {
+        max-width: 100%;
+        min-width: 293px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    /* 搜索向下 */
+    .shang {
+        margin-bottom: 166px;
+    }
+    
+    /* 设备的图片变化 */
+    .sheBei img {
+        max-width: 100%;
+        min-width: 288px;
+        height: auto;
+    }
+}
